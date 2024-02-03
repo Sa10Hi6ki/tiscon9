@@ -27,15 +27,15 @@
       <fieldset>
         <div class="sub-title">お客様情報</div>
         <div class="form-group">
-          <label for="customerName">氏名</label>
+          <label for="customerName">氏名　(例:神戸 牛太郎)</label>
           <input type="text" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
         </div>
         <div class="form-group">
-          <label for="tel">連絡先TEL</label>
+          <label for="tel">連絡先TEL　(ハイフン不要 例:08012345678)</label>
           <input type="tel" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
         </div>
         <div class="form-group">
-          <label for="email">連絡先メールアドレス</label>
+          <label for="email">連絡先メールアドレス　(例:kobe_beef@gmail.com)</label>
           <input type="text" id="email" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
         <div class="sub-title">集荷元・お届け先</div>
@@ -63,7 +63,7 @@
         </div>
       </fieldset>
       <fieldset>
-      <div class="sub-title">お荷物情報</div>
+      <div class="sub-title">お荷物情報<br>(0個の場合は0と入力してください)</div> 
         <div class="form-group">
           <label for="box">段ボールの個数</label>
           <input type="text" id="box" name="box" th:field="*{box}" class="form-control" value="10"/>
