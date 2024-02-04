@@ -21,7 +21,7 @@
       お見積り情報入力
     </div>
     <ul th:if="${#fields.hasErrors('all')}">
-      <li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li>
+      <div class="warning"><li th:each="err : ${#fields.errors('all')}" th:text="${err}"></li></div>
     </ul>
     <div class="col-sm-12">
       <fieldset>
