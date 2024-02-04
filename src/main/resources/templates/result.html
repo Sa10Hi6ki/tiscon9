@@ -21,6 +21,8 @@
     <div class="col-sm-12">
       <div class="text-center">
         <div class="primary-text"><span th:text="${price}"></span>円</div>
+        <div class="sub-title">（距離[km] × 100 [円/km] + トラック輸送費[円]）× 季節係数 + 洗濯機設置費用(選択してない場合は0円)</div>
+        季節係数：3月から4月は1.5、9月は1.2、その他は1<br>トラック輸送費：2トントラックは3万円、4トントラックは5万円<br>
         <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼へ</button>
       </div>
       <div class="sub-title">お客様情報</div>
@@ -45,11 +47,16 @@
         </tr>
         </tbody>
         </table>
-      <div class="sub-title">集荷元・お届け先</div>
+      <div class="sub-title">引越し月・集荷元・お届け先</div>
       <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
         <col span="2" style="background-color: #FFFFFF;">
         <tbody>
+        <tr>
+            <th style="width: 40%">引越し月</th>
+            <td><span th:text="*{monthId}"></span>月</td>
+            <input type="hidden" name="monthId" id="monthId" th:value="*{monthId}"/>
+        </tr>
         <tr>
           <th style="width: 40%">転居元住所（都道府県）</th>
           <td>
