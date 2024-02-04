@@ -55,12 +55,17 @@
       </table>
     </div>
     <div class="col-sm-12">
-      <div class="sub-title">集荷元・お届け先</div>
+      <div class="sub-title">引越し月・集荷元・お届け先</div>
       <table class="table table-bordered">
         <col span="1" style="background-color: #FFFFFF;">
         <col span="2" style="background-color: #FFFFFF;">
         <tbody>
-        <tr>
+          <tr>
+            <th style="width: 40%">引越し月</th>
+            <td><span th:text="*{monthId}"></span>月</td>
+            <input type="hidden" name="monthId" id="monthId" th:value="*{monthId}"/>
+          </tr>
+          <tr>
           <th style="width: 40%">集荷元住所（都道府県）</th>
           <td>
             <span th:each="prefecture : ${prefectures}" th:text="${prefecture.prefectureName}" th:if="${prefecture.prefectureId}==*{oldPrefectureId}">東京</span>
